@@ -30,6 +30,7 @@
    <img width="770" height="580" alt="image" src="https://github.com/user-attachments/assets/ce8b14f3-5967-47a9-8f81-e09bc3999d61" />
    
 # Ingestion Methods. 
+
 - There are three types of Ingestion Methods.
   - Batch Ingestion
     - <img width="581" height="549" alt="image" src="https://github.com/user-attachments/assets/86255134-6cf4-45b3-91d8-6da31b3d7c62" />
@@ -44,8 +45,36 @@
 - And manages it across **Bronze(raw), Silver(cleaned), and Global(curated)** layers.
 1. Ingesting Data into Delta Lake.
    - Ingest files from **external data sources** like cloud object storage into **Delta Lake as Delta Tables**
+     
      <img width="753" height="274" alt="image" src="https://github.com/user-attachments/assets/933b67ba-823b-4198-a560-ac6299b9bd75" />
+     
 2. Delta Table Components Overview
+   
+   <img width="730" height="460" alt="image" src="https://github.com/user-attachments/assets/a25d3577-56a2-45d2-9819-b8a9e578d062" />
+
+3. Delta Table Key features.
+   1. **ACID Transactions**
+      **A** - Atomicity
+      **C** - Consistency
+      **I** - Isolation
+      **D** - Durability
+   2. **DML** - Insert,Update,Delete and Merge
+   3. **Time Travel** - Query and Revert
+   4. Schema Evolution and Enforcement
+  
+# MEDALLION ARCHITECTURE
+- Medallion architecture is a layered data design pattern that progressively improves data quality as it moves through Bronze, Silver and Gold Layers.
+  <img width="816" height="294" alt="image" src="https://github.com/user-attachments/assets/21894556-5fad-4878-80e0-2a6358450dfb" />
+  ## Steps
+  1. **Ingest Data** - Data is ingested into Delta lake using batch, streaming or both
+  2. **Process and improve data quality** - Data is incrementally refined as it moves through layers. Each stage improves structure, quality and usability.
+  3. **Bronze Layer** - Stores raw, unprocessed data from multiple sources. [Acts as foundation for all downstream processing]
+  4. **Silver Layer** - Data is cleaned, transformed and enriched.[ Analysis ready datasets]
+  5. **Gold Layer** - contains curated and aggregated data. Optimised for reporting, BI, and advanced analytics 
+     
+
+   
+   
    
 
      
