@@ -28,6 +28,7 @@
       - Standard Connectors
       - Managed Connectors
    <img width="770" height="580" alt="image" src="https://github.com/user-attachments/assets/ce8b14f3-5967-47a9-8f81-e09bc3999d61" />
+   
 # Ingestion Methods. 
 - There are three types of Ingestion Methods.
   - Batch Ingestion
