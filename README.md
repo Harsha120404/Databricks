@@ -1,4 +1,4 @@
-<img width="753" height="274" alt="image" src="https://github.com/user-attachments/assets/86458ed0-b500-4270-9e6f-ef0b8525fefe" /># Databricks 
+# Databricks 
 - Databricks offers LakeFlow , an End to End data engineering solution for delivering high quality data for downstream analytics, AI and operational applications
 ## LakeFlow Connect
 - Efficient ingestion connectors for enterprise applications, databases, cloud storage, message buses and local files.
