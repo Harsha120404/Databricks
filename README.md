@@ -70,7 +70,41 @@
   2. **Process and improve data quality** - Data is incrementally refined as it moves through layers. Each stage improves structure, quality and usability.
   3. **Bronze Layer** - Stores raw, unprocessed data from multiple sources. [Acts as foundation for all downstream processing]
   4. **Silver Layer** - Data is cleaned, transformed and enriched.[ Analysis ready datasets]
-  5. **Gold Layer** - contains curated and aggregated data. Optimised for reporting, BI, and advanced analytics 
+  5. **Gold Layer** - contains curated and aggregated data. Optimised for reporting, BI, and advanced analytics
+
+# Data Ingestion from Cloud Storage
+- How raw files from cloud storage can be efficiently converted into delta tables using Databricks.
+## 1. Data Ingestion Patterns.
+   - Data ingestion is a critical component of modern Lakehouse architecture, enabling organizations to take advantage of large volumes of data stored in cloud object storage systems.
+     <img width="805" height="337" alt="image" src="https://github.com/user-attachments/assets/eae018f1-9076-4b4d-9f7a-1161df0a6e9e" />
+## 2. Data Ingestion Methods.
+   1. Create Table as
+      - Can detect the file format automatically and infer a unified schema across all files.
+      - Specify specific file format options to read in data based on the source format.
+      - Can be used in streaming tables to incrementally ingest files into Delta Lake using Auto Loader.
+      <img width="675" height="651" alt="image" src="https://github.com/user-attachments/assets/994b6c96-f47a-4db2-8931-49b3e725a719" />
+   2. Copy into
+      - This command performs bulk load from files in cloud storage into the table.
+      - **Idempotent** - Will skip any files that have already been loaded into the table; only new files will be ingested
+      - **From Clause** - Specifies the path of the cloud storage location.
+      - **format_options()** - Controls how the source files are parsed and interpreted (options depend on file format)
+      - **Copy_options()** - Controls the behavior of the COPY INTO operation
+        itself, such as: Schema evolution using (mergeSchema), Idempotency using (force)
+      <img width="689" height="660" alt="image" src="https://github.com/user-attachments/assets/4b055a62-c175-4f08-bca9-bab7b1f73e3b" />
+   3. Auto Loader
+      - Process new data files incrementally
+      - Ingest data without extra setup or complex configuration.
+      - Automatically Detect and load new files into delta tables.
+      - Built on **Spark Structured Streaming**
+      <img width="665" height="477" alt="image" src="https://github.com/user-attachments/assets/5ed508b5-2c07-438a-a0a1-f237013e097a" />
+
+## 3.Ingestion methods at a glance.
+<img width="802" height="800" alt="Screenshot 2026-09-06 at 13 12 10" src="https://github.com/user-attachments/assets/7f2264c7-d7b1-462b-b607-6d44a899b0d7" />
+
+
+
+
+
      
 
    
