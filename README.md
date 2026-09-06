@@ -109,6 +109,11 @@
   - _metadata.file_modification_time - last modification timestamp of input file.
   - _metadata.file_name - name of the source file for each row.
 
+# Working with the Rescued Data Column
+- _rescued_data captures mismatched or unparseable fields as JSON during data ingestion, preserving non-conforming input values in your Lakehouse tables instead of dropping them.
+
+
+
 
 
 
