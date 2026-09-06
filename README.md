@@ -101,6 +101,14 @@
 ## 3.Ingestion methods at a glance.
 <img width="802" height="800" alt="Screenshot 2026-09-06 at 13 12 10" src="https://github.com/user-attachments/assets/7f2264c7-d7b1-462b-b607-6d44a899b0d7" />
 
+# Appending Metadata Columns on Ingest
+- adding metadata columns like source file name and modification time.
+  ### Steps
+  - Raw Files -> Delta Table -> Metadata columns(Last_mod_time, Source) -> Bronze Table
+- we have **_metadata** column. A hidden column that is available for all input file formats.
+  - _metadata.file_modification_time - last modification timestamp of input file.
+  - _metadata.file_name - name of the source file for each row.
+
 
 
 
