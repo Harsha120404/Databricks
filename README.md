@@ -151,6 +151,35 @@
       2. Partner Connect Ecosystem
          <img width="742" height="252" alt="image" src="https://github.com/user-attachments/assets/8ea41b06-73dd-4d40-b2db-e3045b220bb4" />
 
+# Ingesting into Existing Delta Tables
+- Additional features like Lakehouse Federation, Zerobus, Delta Sharing, and Databricks Marketplace to expand data integration, sharing, and collaboration capabilities in the Lakehouse.
+  ## Lakehouse Federation
+   - Allows you to query external data sources without moving your data.
+   - Ad hoc reporting
+   - proof of concept work
+   - The exploratory phase of new ETL pipelines or reports
+   - Supporting workloads during incremental migration
+  ## Zerobus(coming soon)
+   - A lokeflow connect API that allows developers to **write event data directly to their lakehouse** at high throughput with near real time latency.
+   - used for - iot
+              - clickstreams
+              - Telemetry
+  ## Delta sharing.
+   - Allows you to securely share data across platforms, clouds, and regions
+ 
+## Ingesting Data with Databricks Marketplace
+- An open market place for all our data, analytics and AI
+  <img width="642" height="615" alt="image" src="https://github.com/user-attachments/assets/8164a1d8-b99c-4fe1-a364-3da9c4bdc108" />
+## Updates, Inserts, and Deletes on Delta Tables with MERGE INTO
+   - MERGE INTO Overview
+   <img width="636" height="429" alt="image" src="https://github.com/user-attachments/assets/a997fb9f-4270-483c-bff4-420a49a71b62" />
+   - MERGE INTO SQL Syntax
+   <img width="1113" height="654" alt="image" src="https://github.com/user-attachments/assets/15b61633-a1bd-40e6-9396-79b354925171" />
+
+
+
+
+
           
 
 
