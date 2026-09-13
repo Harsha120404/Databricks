@@ -112,6 +112,50 @@
 # Working with the Rescued Data Column
 - _rescued_data captures mismatched or unparseable fields as JSON during data ingestion, preserving non-conforming input values in your Lakehouse tables instead of dropping them.
 
+# Ingesting Enterprise Data Overview
+   1. Data Ingestion to Databricks Overview
+      - Till now we have ingested data from cloud object storage into Databricks.
+      - Now how to ingest data from databases or enterprise applications?
+        <img width="726" height="306" alt="image" src="https://github.com/user-attachments/assets/cba50bd9-dbd1-4022-8dd3-2550233c1643" />
+   2. LakeFlow Connect Managed Connectors
+      - 1st method is by using **LakeFlow Connect Managed Connectors**.
+      - LakeFlow Connect Managed Connectors are built into Databricks and are designed to simplify the process of ingesting data from a wide variety of enterprise databases and applications.
+      - low code, fully managed, reduced manual configuration or cushion integration code.
+        <img width="740" height="398" alt="image" src="https://github.com/user-attachments/assets/7fbcb364-f0af-4527-bd5f-18c47f794afe" />
+   3. Data Ingestion with Lakeflow Connect Managed Connectors
+      - By using Lakeflow connect managed connectors, we can ingest enterprise data from sources like Workday, Salesforce, PostgreSQL, SQL Server, and more.
+      - These are fast, reliable.
+      - Setup can be done through **Point and Click UI** or via UPI. 
+        <img width="736" height="295" alt="image" src="https://github.com/user-attachments/assets/4493914e-32e7-4919-8021-81a4d74a9cb7" />
+   4. Lakeflow Connect Managed Connectors: SaaS Ingestion
+      - Lakeflow connect enables data ingestion from external, publicly accessible sources such as APIs or OLAP endpoints into Streaming Delta Tables, using **Serverless, declarative pipelines**
+      - Managed connectors leverage efficient incremental reads and writes to make data ingestion **faster,scalable and more cost-efficient**
+        - For SaaS connectors, all data movement happens in the data plane. The control plane is only used for pipeline setup, monitoring (e.g., reading event logs), and management.
+   5. Database Ingestion Architecture
+      1. Classic compute **declarative Pipelines** job **collects credentials** from UC
+      2. It uses the credentials to **connect and collect data** from ur database sources
+      3. The latest **state and staging data are saved ** to UC volume
+      4. A serverless Declarative pipeline job **processes the collected data** to your Streaming Delta Tables.
+         <img width="717" height="292" alt="image" src="https://github.com/user-attachments/assets/bda86c41-743e-4ed5-87a5-21a1df820b2d" />
+### Ingestion Gateway - (helps with networking, limit the load, scalability)
+      - A dedicated pipeline that connects to the database to extract.
+        - Metadata , snapshots, change logs
+      - Unity Catalog Volume
+        - Intermediate staging layer , enabling the next pipeline to pick up and stream data.
+        - Secured and access is limited to the user running the pipeline.
+   6. Data Ingestion with Partner Connect
+      - If no managed connector available , we can use partner connect.
+      1. Overview
+         - Lets you create trail accounts with select Databricks technology partners.
+         - It enables you to connect your Databricks workspace to partner solutions directly from the Databricks UI.
+      2. Partner Connect Ecosystem
+         <img width="742" height="252" alt="image" src="https://github.com/user-attachments/assets/8ea41b06-73dd-4d40-b2db-e3045b220bb4" />
+
+          
+
+
+   
+
 
 
 
