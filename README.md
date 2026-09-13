@@ -172,9 +172,9 @@
   <img width="642" height="615" alt="image" src="https://github.com/user-attachments/assets/8164a1d8-b99c-4fe1-a364-3da9c4bdc108" />
 ## Updates, Inserts, and Deletes on Delta Tables with MERGE INTO
    - MERGE INTO Overview
-   - <img width="636" height="429" alt="image" src="https://github.com/user-attachments/assets/a997fb9f-4270-483c-bff4-420a49a71b62" />
+     <img width="636" height="429" alt="image" src="https://github.com/user-attachments/assets/a997fb9f-4270-483c-bff4-420a49a71b62" />
    - MERGE INTO SQL Syntax
-   - <img width="1113" height="654" alt="image" src="https://github.com/user-attachments/assets/15b61633-a1bd-40e6-9396-79b354925171" />
+     <img width="1113" height="654" alt="image" src="https://github.com/user-attachments/assets/15b61633-a1bd-40e6-9396-79b354925171" />
 
 
 
